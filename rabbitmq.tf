@@ -36,7 +36,7 @@ resource "null_resource" "app_install" {
     }
 
     inline = [ 
-      "ansible-pull -U https://github.com/Adnan-110/ansible.git -e ENVIRONMENT=${var.ENV} -e COMPONENT=rabbitmq roboshop-pull.yaml"
+      "ansible-pull -U https://github.com/Adnan-110/ansible.git -e ENVIRONMENT=${var.ENV} -e COMPONENT=rabbitmq roboshop-pull.yml"
      ]
   }  
 }
