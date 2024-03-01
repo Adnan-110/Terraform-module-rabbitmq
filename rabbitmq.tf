@@ -36,6 +36,7 @@ resource "null_resource" "app_install" {
     }
 
     inline = [ 
+      "curl https://gitlab.com/thecloudcareers/opensource/-/raw/master/lab-tools/ansible/install.sh | sudo bash",
       "ansible-pull -U https://github.com/Adnan-110/ansible.git -e ENVIRONMENT=${var.ENV} -e COMPONENT=rabbitmq roboshop-pull.yml"
      ]
   }  
